@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		846A1A0A2B01C996003D7F4F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A1A092B01C996003D7F4F /* LottieView.swift */; };
 		846A1A0C2B0203DA003D7F4F /* AlProPullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A1A0B2B0203DA003D7F4F /* AlProPullToRefresh.swift */; };
+		847DCA912B0370CD00334A08 /* AlIslandPullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DCA902B0370CD00334A08 /* AlIslandPullToRefresh.swift */; };
 		84D664492B01B81600B15EFF /* AlPullToRefreshApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D664482B01B81600B15EFF /* AlPullToRefreshApp.swift */; };
 		84D6644B2B01B81600B15EFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6644A2B01B81600B15EFF /* ContentView.swift */; };
 		84D6644D2B01B81700B15EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D6644C2B01B81700B15EFF /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		846A1A092B01C996003D7F4F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		846A1A0B2B0203DA003D7F4F /* AlProPullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlProPullToRefresh.swift; sourceTree = "<group>"; };
+		847DCA902B0370CD00334A08 /* AlIslandPullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlIslandPullToRefresh.swift; sourceTree = "<group>"; };
 		84D664452B01B81600B15EFF /* AlPullToRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlPullToRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D664482B01B81600B15EFF /* AlPullToRefreshApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlPullToRefreshApp.swift; sourceTree = "<group>"; };
 		84D6644A2B01B81600B15EFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				84D6644A2B01B81600B15EFF /* ContentView.swift */,
 				84D664572B01B96300B15EFF /* AlPullToRefresh.swift */,
 				846A1A0B2B0203DA003D7F4F /* AlProPullToRefresh.swift */,
+				847DCA902B0370CD00334A08 /* AlIslandPullToRefresh.swift */,
 				846A1A092B01C996003D7F4F /* LottieView.swift */,
 				84D6644C2B01B81700B15EFF /* Assets.xcassets */,
 				84D6644E2B01B81700B15EFF /* AlPullToRefresh.entitlements */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D6644B2B01B81600B15EFF /* ContentView.swift in Sources */,
+				847DCA912B0370CD00334A08 /* AlIslandPullToRefresh.swift in Sources */,
 				846A1A0C2B0203DA003D7F4F /* AlProPullToRefresh.swift in Sources */,
 				84D664582B01B96300B15EFF /* AlPullToRefresh.swift in Sources */,
 				84D664492B01B81600B15EFF /* AlPullToRefreshApp.swift in Sources */,
