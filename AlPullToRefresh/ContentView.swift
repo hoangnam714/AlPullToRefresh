@@ -15,12 +15,7 @@ struct ContentView: View {
             } content: {
                 Color.red.frame(height: 300)
             }
-            
-//            AlProPullToRefresh()
-            
-//            AlPro2PullToRefresh()
         }
-        
     }
 }
 

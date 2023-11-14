@@ -49,6 +49,21 @@
                   endingLineNumber = "83"
                   offsetFromSymbolStart = "452">
                </Location>
+               <Location
+                  uuid = "B3F14358-39F5-49DE-8883-4AC76B44AEA6 - 46b4f1603fb9b419"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in AlPullToRefresh.AlProPullToRefresh.updateData() -&gt; ()"
+                  moduleName = "AlPullToRefresh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/AlPullToRefresh/AlPullToRefresh/AlProPullToRefresh.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "496">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -96,6 +111,21 @@
                   startingLineNumber = "87"
                   endingLineNumber = "87"
                   offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "533B26C8-CA1F-4788-9429-980768C15BD5 - 46b4f1603fb9b5a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in AlPullToRefresh.AlProPullToRefresh.updateData() -&gt; ()"
+                  moduleName = "AlPullToRefresh"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/AlPullToRefresh/AlPullToRefresh/AlProPullToRefresh.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "624">
                </Location>
             </Locations>
          </BreakpointContent>

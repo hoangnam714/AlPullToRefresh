@@ -34,25 +34,24 @@ struct AlPullToRefreshView<Content: View>: View {
     var body: some View {
         ScrollView( .vertical, showsIndicators: showIndicator){
             VStack(spacing: 0) {
-                    ResizeLottieView(fileName: name, isPlay: $scrollDelegate.isRefreshsing)
-                        .scaleEffect(scrollDelegate.isEligible ? 1 : 0.001)
-                        .animation(.easeInOut(duration: 0.2), value: scrollDelegate.isEligible)
-                        .overlay(content: {
-                            VStack(spacing: 12, content: {
-                                Image(systemName: "arrow.down")
-                                    .font(.caption.bold())
-                                    .foregroundColor(.white)
-                                    .padding(8)
-                                    .background(.primary, in: Circle())
-                                Text("Pull to refresh")
-                            })
-                            .offset(y: 40)
-                            .opacity(scrollDelegate.isEligible ? 0 : 1)
-                            .animation(.easeInOut(duration: 0.25), value: scrollDelegate.isEligible)
+                ResizeLottieView(fileName: name, isPlay: $scrollDelegate.isRefreshsing)
+                    .scaleEffect(scrollDelegate.isEligible ? 1 : 0.001)
+                    .animation(.easeInOut(duration: 0.2), value: scrollDelegate.isEligible)
+                    .overlay(content: {
+                        VStack(spacing: 12, content: {
+                            Image(systemName: "arrow.down")
+                                .font(.caption.bold())
+                                .foregroundColor(.white)
+                                .padding(8)
+                                .background(.primary, in: Circle())
+                            Text("Pull to refresh")
                         })
-                        .frame(height: scrollDelegate.isEligible ? minimumSpaceRefresh*scrollDelegate.progress : 0)
-                        .opacity(scrollDelegate.progress)
-                        .offset(y: scrollDelegate.isEligible ? -(scrollDelegate.contentOffset < 0 ? 0 : scrollDelegate.contentOffset) : -(scrollDelegate.scrollOffset < 0 ? 0 : scrollDelegate.scrollOffset ))
+                        .opacity(scrollDelegate.isEligible ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.25), value: scrollDelegate.isEligible)
+                    })
+                    .frame(height: minimumSpaceRefresh*scrollDelegate.progress)
+                    .opacity(scrollDelegate.progress)
+                    .offset(y: scrollDelegate.isEligible ? -(scrollDelegate.contentOffset < 0 ? 0 : scrollDelegate.contentOffset) : -(scrollDelegate.scrollOffset < 0 ? 0 : scrollDelegate.scrollOffset ))
                 content
             }
             .offset(coordinateSpace: id) { offSet in
@@ -82,7 +81,7 @@ struct AlPullToRefreshView<Content: View>: View {
                         scrollDelegate.isEligible = false
                         scrollDelegate.isRefreshsing = false
                         scrollDelegate.scrollOffset = 0
-//                        scrollDelegate.contentOffset = 0
+                        //                        scrollDelegate.contentOffset = 0
                     }
                 }
             }
@@ -174,18 +173,17 @@ class ScrollViewModel: NSObject, ObservableObject, UIGestureRecognizerDelegate {
 extension View {
     @ViewBuilder
     func offset(coordinateSpace: String, offSet: @escaping(CGFloat)->()) -> some View {
-        self
-            .overlay {
-                GeometryReader { proxy in
-                    let minY = proxy.frame(in: .named(coordinateSpace)).minY
-                    Color.clear
-                        .preference(key: OffsetKey.self, value: minY)
-                        .onPreferenceChange(OffsetKey.self, perform: { value in
-                            offSet(value)
-                            print(value)
-                        })
-                }
-            }
+        
+        GeometryReader { proxy in
+            let minY = proxy.frame(in: .named(coordinateSpace)).minY
+            self
+                .preference(key: OffsetKey.self, value: minY)
+                .onPreferenceChange(OffsetKey.self, perform: { value in
+                    offSet(value)
+                    print(value)
+                })
+        }
+        
     }
 }
 
